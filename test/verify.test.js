@@ -37,37 +37,42 @@ afterEach(async () => {
   await browser.close();
 });
 
-describe('the index.js file', () => {
-  it('should save the length of the string variable named quote in a variable named quoteLength', async () => {
-    const quoteLength = await page.evaluate(() => quoteLength);
-    const quote = await page.evaluate(() => quote);
-    expect(quoteLength).toBe(quote.length);
+describe('subject', () => {
+  it('should capture the result of 1 plus 4 in a variable named sum', async () => {
+    const sum = await page.evaluate(() => sum);
+    expect(sum).toBe(1 + 4);
   });
   
-  it('should save the twenty-second character in the quote in a variable named twentySecondLetter', async () => {
-    const twentySecondLetter = await page.evaluate(() => twentySecondLetter);
-    const quote = await page.evaluate(() => quote);
-    expect(twentySecondLetter).toBe(quote[21]);
+  it('should capture the result of sum minus 2 in a variable named difference', async () => {
+    const sum = await page.evaluate(() => sum);
+    const difference = await page.evaluate(() => difference);
+    expect(difference).toBe(sum - 2);
   });
   
-  it('should create a string variable named output that contains the quoteLength', async () => {
-    const output = await page.evaluate(() => output);
-    const quoteLength = await page.evaluate(() => quoteLength);
-    expect(output).toContain(`${quoteLength}`);
+  it('should capture the result of difference multiplied by 5 in a variable named product', async () => {
+    const product = await page.evaluate(() => product);
+    const difference = await page.evaluate(() => difference);
+    expect(product).toBe(difference * 5);
   });
   
-  it('should create a string variable named output that contains the twentySecondLetter between two brackets ([])', async () => {
-    const output = await page.evaluate(() => output);
-    const twentySecondLetter = await page.evaluate(() => twentySecondLetter);
-    expect(output).toContain(`[${twentySecondLetter}]`);
+  it('should capture the result of product divided by 2 in a variable named quotient', async () => {
+    const product = await page.evaluate(() => product);
+    const quotient = await page.evaluate(() => quotient);
+    expect(quotient).toBe(product / 2);
   });
   
-  it('should assign the innerHTML of the HTML element with the id result to the output', async () => {
-    const output = await page.evaluate(() => output);
+  it('should capture the remainder of product remainder of 2 in a variable named remainder', async () => {
+    const product = await page.evaluate(() => product);
+    const remainder = await page.evaluate(() => remainder);
+    expect(remainder).toBe(product % 2);
+  });
+  
+  it('should assign the innerHTML of the HTML element with the id result to the quotient', async () => {
+    const quotient = await page.evaluate(() => quotient);
     const innerHtml = await page.$eval("#result", (result) => {
       return result.innerHTML;
     });
       
-    expect(innerHtml).toBe(output);
+    expect(innerHtml).toBe(`${quotient}`);
   });
 });

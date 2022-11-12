@@ -1,13 +1,14 @@
-# 007 String Length
+# 008 Math
 
-[![007 String Length](https://img.youtube.com/vi/X_SN4AFo21s/0.jpg)](https://www.youtube.com/watch?v=X_SN4AFo21s)
+[![008 Math](https://img.youtube.com/vi/YnxjNUbuwWE/0.jpg)](https://www.youtube.com/watch?v=YnxjNUbuwWE)
 
 the index.js file
-- should save the length of the string variable named quote in a variable named quoteLength
-- should save the twenty-second character in the quote in a variable named twentySecondLetter
-- should create a string variable named output that contains the quoteLength 
-- should create a string variable named output that contains the twentySecondLetter between two brackets ([])
-- should assign the innerHTML of the HTML element with the id result to the output
+- should capture the result of 1 plus 4 in a variable named sum
+- should capture the result of sum minus 2 in a variable named difference
+- should capture the result of difference multiplied by 5 in a variable named product
+- should capture the result of product divided by 2 in a variable named quotient
+- should capture the remainder of product remainder of 2 in a variable named remainder
+- should assign the innerHTML of the HTML element with the id result to the quotient
 
 resources:
 - https://www.w3schools.com/js/js_let.asp
